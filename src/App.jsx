@@ -1,10 +1,12 @@
+import Layout from "./components/Layout";
 import "./index.css";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <>
-      <h1 className="]">Hello Word</h1>
-    </>
+    <Layout>
+      <Home />
+    </Layout>
   );
 }
 
