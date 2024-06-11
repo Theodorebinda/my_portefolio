@@ -1,7 +1,10 @@
+import ImageComponent from "./ImagesComponent";
+
 export default function HeroSection() {
   return (
-    <div className="bg-[url('https://res.cloudinary.com/dhdaxlymt/image/upload/v1718025904/Portefolio/cf9ufxmk7cnysia6tir8.png')]">
-      <div className="flex justify-between items-center mx-10">
+    <div id="hero" className={` relative min-h-screen pt-2`}>
+      <div className="absolute inset-0 bg-custom z-0"></div>
+      <div className="flex justify-between items-center mx-10 relative z-10">
         <div>
           <span className="text-shadow-md">Hello word! Je suis</span>
           <div>
@@ -20,10 +23,13 @@ export default function HeroSection() {
           </div>
         </div>
         <div className="">
-          <img
+          <ImageComponent
             className="object-cover"
-            src="https://res.cloudinary.com/dhdaxlymt/image/upload/v1718021836/Portefolio/huyb683pyjetyhyziaknImageMoi.png"
-            alt=""
+            src={
+              "https://res.cloudinary.com/dhdaxlymt/image/upload/v1718021836/Portefolio/huyb683pyjetyhyziaknImageMoi.png"
+            }
+            alt="imageTheodore"
+            effect="blur"
           />
         </div>
       </div>

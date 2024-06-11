@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+.bg-custom {
+    background-image: url('https://res.cloudinary.com/dhdaxlymt/image/upload/v1718025904/Portefolio/cf9ufxmk7cnysia6tir8.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(0.5) contrast(4.5); /* Ajuste la luminosité et le contraste */
+  }
+
+  .navbar-hidden {
+    background-image: url('https://res.cloudinary.com/dhdaxlymt/image/upload/v1718025904/Portefolio/cf9ufxmk7cnysia6tir8.png');
+    color: #515050;
+    background-size: cover;
+    filter: brightness(0.5) contrast(4.5); 
+    transition: all 0.9s ease;
+  }
+  
+  .navbar-visible {
+    background: #c6c3c3;
+    transition: all 2.9s ease;
+
+  }

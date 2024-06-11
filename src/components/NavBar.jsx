@@ -1,16 +1,41 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navigation() {
+  const [navbarVisible, setNavbarVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroHeight = document.getElementById("hero").offsetHeight;
+      if (window.scrollY >= heroHeight) {
+        setNavbarVisible(true);
+      } else if (window.scrollY >= heroHeight) {
+        setNavbarVisible(false);
+      } else {
+        setNavbarVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <nav>
-      <div className="bg-[url('https://res.cloudinary.com/dhdaxlymt/image/upload/v1718025904/Portefolio/cf9ufxmk7cnysia6tir8.png')]">
+    <nav className="relative">
+      <div
+        className={`fixed top-0 left-0 w-full z-30 ${
+          navbarVisible ? "navbar-visible" : "navbar-hidden"
+        }`}
+      >
         <div className="flex justify-between items-center p-3">
           <div className="flex justify-start items-center ">
             <span>Theodore Samba</span>
             <img
-              className="w-10"
+              className="w-6"
               src="https://res.cloudinary.com/dhdaxlymt/image/upload/v1718022670/Portefolio/LogoSite.png"
-              rel="logo du site"
+              alt="logo du site"
             ></img>
           </div>
           <ul className="flex gap-5">
